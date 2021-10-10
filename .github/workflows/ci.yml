@@ -12,12 +12,13 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v2
       - name: Create dot env file
       - shell: bash
         run: |
           touch .env
-          echo "env=${{ secrets.env }}" >> .env
+          echo "ENV=${{ secrets.ENV }}" >> .env
+    steps:
+      - uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
