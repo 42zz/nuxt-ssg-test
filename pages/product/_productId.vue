@@ -6,6 +6,8 @@
       <div class="">{{ variant.price }}円</div>
     </div>
     <div class="p-productDetail__body">{{ product.body_html }}</div>
+  <a href="/">一覧に戻る(A)</a>
+  <NuxtLink to="/">一覧に戻る(N)</NuxtLink>
   </div>
 </template>
 
